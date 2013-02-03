@@ -12,6 +12,7 @@ namespace :js do
         puts " >>>>>>>>>>>>>> 2"
         js = CoffeeScript.compile File.read("#{source}#{cf}") 
         open "#{javascripts}#{cf.gsub('.coffee', '.js')}", 'w' do |f|
+          puts " >>>>>>>>>>>>>> 3"
           f.puts js
         end 
       end 
