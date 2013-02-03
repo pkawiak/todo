@@ -13,8 +13,9 @@ namespace :js do
         js = CoffeeScript.compile File.read("#{source}#{cf}") 
         open "#{javascripts}#{cf.gsub('.coffee', '.js')}", 'w' do |f|
           puts js
-          f.puts js
+          f.write js
           puts " >>>>> DONE #{f.path}"
+          f.close
         end 
       end 
     end
