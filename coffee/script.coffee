@@ -1,1 +1,1 @@
-alert('LOL')
+alert('LOLzz')

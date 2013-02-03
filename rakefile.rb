@@ -5,6 +5,7 @@ namespace :js do
   task :compile do
     source = "#{File.dirname(__FILE__)}/coffee/"
     javascripts = "#{File.dirname(__FILE__)}/public/scripts/"
+    FileUtils.mkdir_p javascripts
 
     Dir.foreach(source) do |cf|
       unless cf == '.' || cf == '..' 
