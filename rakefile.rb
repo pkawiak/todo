@@ -14,7 +14,7 @@ namespace :js do
         open "#{javascripts}#{cf.gsub('.coffee', '.js')}", 'w' do |f|
           puts js
           f.puts js
-          puts " >>>>> DONE"
+          puts " >>>>> DONE #{f.path}"
         end 
       end 
     end
