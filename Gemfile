@@ -1,5 +1,5 @@
 source :rubygems
-gem 'therubyracer'
+gem 'therubyracer', '0.10.2'
 gem 'coffee-script'
-gem 'sinatra'
+gem 'sinatra', '1.1.0'
 gem 'thin'
