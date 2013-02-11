@@ -1,1 +1,1 @@
-coffee --compile --output public/ src/
+coffee -w --compile --output public/ src/

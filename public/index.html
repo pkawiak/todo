@@ -2,14 +2,34 @@
 <html>
 <head>
     <title>I have a back bone</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-    <script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.1.4/underscore-min.js"></script>
-    <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.3.3/backbone-min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/backbone.js/0.9.10/backbone-min.js"></script>
     <script src="application.js"></script>
+
+    <script type="text/template" id="todo_view_template">
+        <header><%= title %></header>
+        <section><%= description %></section>
+        <footer>
+            <label>
+                <input type="checkbox" <%= done ? 'checked' : '' %> />
+                Done
+            </label>
+        </footer>
+    </script>
+
+    <script type="text/template" id="add_todo_view_template">
+        <input id="title" type="text" value="<%= title %>"/>
+        <input id="description" type="text" value="<%= description %>"/>
+        <input id="add" type="button" value="Add"/>
+    </script>
+
 </head>
 <body>
-<button id="add-friend">Add Friend</button>
-<ul id="friends-list">
-</ul>
+<div id="addTodo"></div>
+<div id="todos">
+    <ul></ul>
+    <span></span>
+</div>
 </body>
 </html>
